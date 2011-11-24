@@ -1,4 +1,5 @@
 /Users/edipoterra/prova/bin/classes.dex : \
+/Users/edipoterra/prova/bin/classes/com/example/imagens/ImagemSave.class \
 /Users/edipoterra/prova/bin/classes/com/example/imagens/ImagensActivity$1.class \
 /Users/edipoterra/prova/bin/classes/com/example/imagens/ImagensActivity$2.class \
 /Users/edipoterra/prova/bin/classes/com/example/imagens/ImagensActivity.class \

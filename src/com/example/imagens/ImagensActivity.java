@@ -51,4 +51,10 @@ public class ImagensActivity extends ListActivity
       Log.e(getString(R.string.app_name), e.getMessage());
     }
   }
+
+  protected void onListItemClick(ListView l, View v, int position, long id) {
+    Log.e(getString(R.string.app_name), "passei aqui");
+    Intent intent = new Intent(this, ImagemSave.class);
+    startActivity(intent);
+  }
 }
