@@ -1,5 +1,6 @@
 package com.example.imagens;
 
+import com.example.imagens.*;
 import android.app.*;
 import android.content.*;
 import android.os.*;
@@ -13,6 +14,7 @@ import java.util.*;
 public class ImagensActivity extends ListActivity
 {
   protected IMSInterface imInterface;
+  public Object nameImage;
 
   private ServiceConnection serviceConnection = new ServiceConnection()
   {
@@ -30,6 +32,7 @@ public class ImagensActivity extends ListActivity
   {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main);
+
     this.bindService(new Intent(ImagensActivity.this, IMService.class), 
         serviceConnection, Context.BIND_AUTO_CREATE);
     Button add = (Button) findViewById(R.id.refresh);
@@ -55,6 +58,11 @@ public class ImagensActivity extends ListActivity
   protected void onListItemClick(ListView l, View v, int position, long id) {
     Log.e(getString(R.string.app_name), "passei aqui");
     Intent intent = new Intent(this, ImagemSave.class);
+    
+
+    
+    intent.putExtra("Image", (String) l.getItemAtPosition(position));
     startActivity(intent);
   }
+
 }
